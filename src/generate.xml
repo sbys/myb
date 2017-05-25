@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC
+        "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+
+    <!-- !!!! Driver Class Path !!!! -->
+    <classPathEntry location="f:\tool\mysql-connector-java-5.1.6-bin.jar"/>
+
+    <context id="context" targetRuntime="MyBatis3">
+        <commentGenerator>
+            <property name="suppressAllComments" value="false"/>
+            <property name="suppressDate" value="true"/>
+        </commentGenerator>
+
+        <!-- !!!! Database Configurations !!!! -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://112.74.62.223:3306/project2" userId="yuanshuai" password="shuai2236674122"/>
+
+
+        <!-- !!!! Model Configurations !!!! -->
+        <javaModelGenerator targetPackage="orm" targetProject="F:\javaee_workspace\myb">
+            <property name="enableSubPackages" value="false"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <!-- !!!! Mapper XML Configurations !!!! -->
+        <sqlMapGenerator targetPackage="orm" targetProject="F:\javaee_workspace\myb">
+            <property name="enableSubPackages" value="false"/>
+        </sqlMapGenerator>
+
+        <!-- !!!! Mapper Interface Configurations !!!! -->
+        <javaClientGenerator targetPackage="orm" targetProject="F:\javaee_workspace\myb" type="XMLMAPPER">
+            <property name="enableSubPackages" value="false"/>
+        </javaClientGenerator>
+
+        <!-- !!!! Table Configurations !!!! -->
+        <table tableName="userInfo" enableCountByExample="true" enableDeleteByExample="true" enableSelectByExample="true"
+               enableUpdateByExample="true"/>
+        <
+    </context>
+</generatorConfiguration>
